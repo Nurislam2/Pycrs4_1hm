@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <h1>{{ book.name }}</h1>
+    <img src="{{ book.photo.url }}" alt="{{ book.name }}">
+    <p><strong>Author:</strong> {{ book.author }}</p>
+    <p><strong>Genre:</strong> {{ book.get_genre_display }}</p>
+    <p><strong>Description:</strong> {{ book.description }}</p>
+    <p><strong>Price:</strong> ${{ book.price }}</p>
+    <p><strong>Publisher:</strong> {{ book.publisher }}</p>
+    <p><strong>Publication Date:</strong> {{ book.publication_date }}</p>
+    <p><strong>Added on:</strong> {{ book.create_at }}</p>
+</body>
+</html>
