@@ -1,0 +1,33 @@
+{% include 'header.html' %}
+<br><br><br>
+
+<h2>Фильтрация по одежде для детей</h2>
+{% if clothes_child %}
+    {% for i in clothes_child %}
+        <h1>{{ i.name }}</h1>
+    {% endfor %}
+{% else %}
+    <p>Нет одежды для детей.</p>
+{% endif %}
+<hr>
+
+<h2>Фильтрация по одежде для взрослых</h2>
+{% if clothes_adult %}
+    {% for i in clothes_adult %}
+        <h1>{{ i.name }}</h1>
+    {% endfor %}
+{% else %}
+    <p>Нет одежды для взрослых.</p>
+{% endif %}
+<hr>
+
+<h2>Фильтрация по одежде для пенсионеров</h2>
+{% if clothes_old %}
+    {% for i in clothes_old %}
+        <h1>{{ i.name }}</h1>
+    {% endfor %}
+{% else %}
+    <p>Нет одежды для пенсионеров.</p>
+{% endif %}
+
+{% include 'footer.html' %}
